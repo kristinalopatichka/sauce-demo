@@ -18,12 +18,12 @@ Steps to reproduce:
 5. In the First Name, Last Name, and Zip Code fields, enter various special characters (e.g. !@#$%^&*()_+<>?{}[]).
 6. Click on the Continue button.
 
-Expected result: Each field should validate user input and allow only specific character types:
+**Expected result:** Each field should validate user input and allow only specific character types:
 
 First Name / Last Name: alphabetic characters (A–Z), optional hyphens or apostrophes
 Zip Code: numeric characters only
 
-Actual result: The application accepts all special characters without validation in all fields. The user is allowed to continue the checkout process with invalid data.
+**Actual result:** The application accepts all special characters without validation in all fields. The user is allowed to continue the checkout process with invalid data.
 
 
 
@@ -50,12 +50,12 @@ Steps to reproduce:
 6. Leave the Last Name and Zip Code fields empty.
 7. Click on the Continue button.
 
-Expected result: Appropriate validation message should appear for each required field that is left empty. 
+**Expected result:** Appropriate validation message should appear for each required field that is left empty. 
 
 Last Name: field required
 Zip Code: field required
 
-Actual result: The application displays a validation error only for the first missing field (e.g., Last Name).
+**Actual result:** The application displays a validation error only for the first missing field (e.g., Last Name).
 No validation message appears for the other required empty fields unless the user corrects the first error and retries.
 
 
@@ -78,9 +78,9 @@ Steps to reproduce:
 3. Enter an invalid password in the Password field.
 4. Click the Login button.
 
-Expected result: A field‑specific validation message should be displayed
+**Expected result:** A field‑specific validation message should be displayed
 
-Actual result: Generic error message is shown. The message does not indicate whether the username or password is incorrect, reducing clarity for the user.
+**Actual result:** Generic error message is shown. The message does not indicate whether the username or password is incorrect, reducing clarity for the user.
 
 
 
@@ -100,8 +100,8 @@ Steps to reproduce: www.saucedemo.com / Any browser
 3. Open the Shopping Cart page.
 4. Attempt to increase the quantity of the selected item (eg. add the same product again or adjust quantity).
 
-Expected result: The user should be able to increase the quantity of the selected item
-Actual result: The user cannot add more than one unit of any item.
+**Expected result:** The user should be able to increase the quantity of the selected item
+**Actual result:** The user cannot add more than one unit of any item.
 
 
 
@@ -124,5 +124,5 @@ Steps to reproduce:
 4. Fill in the First Name, Last Name, and Zip Code fields.
 5. Click Continue to proceed to the next checkout step.
 
-Expected result: The system should display a payment method selection section, allowing the user to choose between available options 
-Actual result: The system does not present any payment method selection options.
+**Expected result:** The system should display a payment method selection section, allowing the user to choose between available options 
+**Actual result:** The system does not present any payment method selection options.
