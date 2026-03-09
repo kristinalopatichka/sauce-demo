@@ -61,7 +61,7 @@ test('User cannot checkout without filling out required fields', async ({ page }
 
 test('User should not be able to successfully checkout when filling invalid Zip Code', async ({ page }) => {
   // Marking test as failed when checkout accepts invalid Zip/Postal Code values and continues to CheckoutStepTwo.
-  test.fail(true, 'Bug: checkout currently accepts invalid Zip/Postal Code values -> fails this test on purpose.');
+  // test.fail(true, 'Bug: checkout currently accepts invalid Zip/Postal Code values -> fails this test on purpose.');
 
   const loginPage = new LoginPage(page);
   const inventoryPage = new ProductsPage(page);
@@ -86,5 +86,5 @@ test('User should not be able to successfully checkout when filling invalid Zip 
   await checkoutPage.clickContinue();
 
   // Desired behavior: invalid Zip/Postal Code should block checkout progression.
-  await expect(page).toHaveURL(SAUCE_DEMO_URLS.checkoutStepTwo);
+  await expect(page).toHaveURL(SAUCE_DEMO_URLS.checkoutStepOne);
 });
