@@ -23,8 +23,10 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html', { outputFile: 'playwright-report/results.html' }]],
-  // reporter: [['list'], ['@estruyf/github-actions-reporter']],
+  // enable html reporter for local runs
+  // reporter: [['html', { outputFile: 'playwright-report/results.html' }]], 
+  // use list github actions reporter for GHA runs
+  reporter: [['list'], ['@estruyf/github-actions-reporter']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
